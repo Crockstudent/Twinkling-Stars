@@ -1,0 +1,23 @@
+let stars = [];// stars array
+
+function setup() {
+  createCanvas(windowWidth, windowHeight);
+   frameRate(10)
+  for (i=0; i<1000; i++) {
+    let star = {
+      x: random(width),
+       y: random(height),
+    }
+    stars.push(star);
+  }
+}
+function draw() {
+  background(0);// grayscale
+  for(let i =0;i<1000;i++){
+      let starX = stars[i].x
+     let starY= stars[i].y
+     noStroke()
+    fill(170)//star color
+    circle(starX,starY,random(1,5))
+  }
+}
